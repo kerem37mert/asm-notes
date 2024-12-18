@@ -26,7 +26,7 @@
     write endp
     
     changeColor proc near
-        mov ax, 0600
+        mov ax, 0600h
         mov bh, 2fh
         mov cx, 0000h
         mov dx, 184fh
