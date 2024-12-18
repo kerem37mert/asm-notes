@@ -6,7 +6,9 @@
 .code
     main proc far
         mov ax, @data
-        mov ds, ax   
+        mov ds, ax 
+        
+        call changeColor  
         
         mov cx, 10
         lea si, myName
@@ -31,5 +33,14 @@
         mov ah, 09h
         int 21h
         ret    
-    write endp    
-end main    
+    write endp
+    
+    changeColor proc near
+        mov ax, 0600h
+        mov bh, 24h
+        mov cx, 0000h
+        mov dx, 184fh
+        int 10h
+        ret
+    changeColor endp    
+end main      
