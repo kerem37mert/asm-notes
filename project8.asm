@@ -66,7 +66,7 @@
         int 21h
         
         ; karakter sayisi bulma
-        lea si, [str]
+        lea si, str
       tekrar2:
         cmp [si], 24h
         je son
